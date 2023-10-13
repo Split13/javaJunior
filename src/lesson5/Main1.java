@@ -5,6 +5,9 @@ public class Main1 {
         ScannerUtil.printFigurs();
         String figura = ScannerUtil.getInputFigura();
 
+        int a = 9;
+        int b = 9;
+
         if(figura.equals("1") || figura.equalsIgnoreCase("Круг")){
             String action = ScannerUtil.getAction();
             int radius = ScannerUtil.getParametr( "Введите число");
