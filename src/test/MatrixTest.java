@@ -10,7 +10,7 @@ public class MatrixTest extends TestCase {
 
         double[][] forMatrix = {{1,2,3},
                                 {4,5,6},
-                                {1,2,3}};
+                                {7,2,3}};
 
         Matrix matrix = new Matrix(forMatrix);
         double resultFact = matrix.determinant();

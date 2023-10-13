@@ -1,6 +1,6 @@
 package test;
 
-public class Matrix implements IMatrix {
+public class  Matrix implements IMatrix {
 
     private double[][] nums;
 

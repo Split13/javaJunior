@@ -29,7 +29,7 @@ public interface IMatrix {
 	
 	/**
 	 * Возвращает элемент матрицы по индексам
-	 * 
+	 * g
 	 * @param rowIndex индекс строки 
 	 * @param colIndex индекс столбца
 	 * @return элемент матрицы по индексам
