@@ -8,24 +8,15 @@ import java.nio.channels.FileChannel;
 
 public class CopyWithChannels implements CopyUtils {
     @Override
-    public void copy(String from, String to) {
-       FileChannel channelFrom = null;
-       FileChannel channelTo = null;
-        try {
-            channelFrom = new FileInputStream(from).getChannel();
-            channelTo = new FileOutputStream(to).getChannel();
-            channelTo.transferFrom(channelFrom, 0, channelFrom.size());
-            channelFrom.close();
-            channelTo.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                channelFrom.close();
-                channelTo.close();
-            } catch (IOException e){
-                e.printStackTrace();
-            }
-        }
+    public void copy(String from, String to) throws IOException {
+        FileChannel channelFrom = null;
+        FileChannel channelTo = null;
+
+        channelFrom = new FileInputStream(from).getChannel();
+        channelTo = new FileOutputStream(to).getChannel();
+        channelTo.transferFrom(channelFrom, 0, channelFrom.size());
+        channelFrom.close();
+        channelTo.close();
+
     }
 }
